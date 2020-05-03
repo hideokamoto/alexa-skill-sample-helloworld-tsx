@@ -45,3 +45,9 @@ alexa-skill-sample-helloworld-typescript
 
 9 directories, 12 files
 ```
+
+## Deployment
+
+Nevermind!
+The project already supported the `npm run build` command by TypeScript with Webpack.
+So we just run `ask deploy` to build your project and deploy to AWS.
