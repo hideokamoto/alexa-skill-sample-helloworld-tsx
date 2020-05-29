@@ -5,6 +5,7 @@ import * as Alexa from 'ask-sdk-core';
 import {
     LaunchRequestHandler
 } from './handlers/LaunchRequest/LaunchRequest.handler'
+import { HelpIntentHandler } from './handlers/HelpIntent/HelpIntent.handler';
 
 
 const HelloWorldIntentHandler: Alexa.RequestHandler = {
@@ -20,20 +21,7 @@ const HelloWorldIntentHandler: Alexa.RequestHandler = {
             .getResponse();
     }
 };
-const HelpIntentHandler: Alexa.RequestHandler = {
-    canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
-    },
-    handle(handlerInput) {
-        const speakOutput = 'You can say hello to me! How can I help?';
 
-        return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .reprompt(speakOutput)
-            .getResponse();
-    }
-};
 const CancelAndStopIntentHandler: Alexa.RequestHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
