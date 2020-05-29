@@ -1,6 +1,6 @@
-const AWS = require('aws-sdk');
+import { S3 } from 'aws-sdk';
 
-const s3SigV4Client = new AWS.S3({
+const s3SigV4Client = new S3({
     signatureVersion: 'v4'
 });
 
