@@ -1,4 +1,4 @@
-# Alexa Skill example (HelloWorld - TypeScript)
+# Alexa Skill example (HelloWorld - TypeScript with JSX)
 
 This repository is a template project of Alexa Skill for ASK CLI(v2)'s "ask new" command.
 We can easy to setup own Alexa custom skill with TypeScript and AWS CloudFormation.
@@ -6,8 +6,8 @@ We can easy to setup own Alexa custom skill with TypeScript and AWS CloudFormati
 
 ## Usage
 
-```
-% ask new  --template-url https://github.com/hideokamoto/alexa-skill-sample-helloworld-typescript.git
+```bash
+% ask new  --template-url https://github.com/hideokamoto/alexa-skill-sample-helloworld-tsx.git
 
 Please follow the wizard to start your Alexa skill project ->
 ? Choose a method to host your skill's backend resources:  AWS with CloudFormation
@@ -16,11 +16,11 @@ Please follow the wizard to start your Alexa skill project ->
 -skill-sample-helloworld-typescript.git. Please make sure you understand the source code to best protect yourself
  from malicious usage.
 ? Would you like to continue download the skill template?  Yes
-? Please type in your skill name:  alexa-skill-sample-helloworld-typescript
-? Please type in your folder name for the skill project (alphanumeric):  alexa-skill-sample-helloworld-typescript
+? Please type in your skill name:  alexa-skill-sample-helloworld-tsx
+? Please type in your folder name for the skill project (alphanumeric):  alexa-skill-sample-helloworld-tsx
 
-% tree alexa-skill-sample-helloworld-typescript -L 3 -I node_modules
-alexa-skill-sample-helloworld-typescript
+% tree alexa-skill-sample-helloworld-tsx -L 3 -I node_modules
+alexa-skill-sample-helloworld-tsx
 ├── LICENSE.txt
 ├── ask-resources.json
 ├── hooks
