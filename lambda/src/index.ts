@@ -6,21 +6,7 @@ import {
     LaunchRequestHandler
 } from './handlers/LaunchRequest/LaunchRequest.handler'
 import { HelpIntentHandler } from './handlers/HelpIntent/HelpIntent.handler';
-
-
-const HelloWorldIntentHandler: Alexa.RequestHandler = {
-    canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'HelloWorldIntent';
-    },
-    handle(handlerInput) {
-        const speakOutput = 'Hello World!';
-        return handlerInput.responseBuilder
-            .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-            .getResponse();
-    }
-};
+import { HelloWorldIntentHandler } from './handlers/HelloWorldIntent/HelloWorldIntent.handler';
 
 const CancelAndStopIntentHandler: Alexa.RequestHandler = {
     canHandle(handlerInput) {
