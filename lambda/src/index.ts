@@ -4,7 +4,7 @@
 import * as Alexa from 'ask-sdk-core';
 import {
     LaunchRequestHandler
-} from '../handlers/LaunchRequest/LaunchRequest.handler'
+} from './handlers/LaunchRequest/LaunchRequest.handler'
 
 
 const HelloWorldIntentHandler: Alexa.RequestHandler = {
