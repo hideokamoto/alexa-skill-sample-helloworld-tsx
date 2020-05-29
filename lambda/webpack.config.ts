@@ -10,7 +10,7 @@ const config: Webpack.Configuration = {
   target: 'node',
   mode: BUILD_VARIANT === 'production' ? 'production' : 'development',
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js', '.tsx']
   },
   devtool: 'source-map',
   entry: './src/index.ts',
@@ -19,10 +19,11 @@ const config: Webpack.Configuration = {
     path: BUILT_PATH,
     libraryTarget: 'commonjs2'
   },
+  externals: ['dtrace-provider', 'fs', 'mv', 'os', 'source-map-support'],
   module: {
     rules: [
       {
-        test: /\.ts?$/,
+        test: /\.tsx?$/,
         loader: 'ts-loader'
       }
     ]
